@@ -46,7 +46,7 @@ jobs:
           fetch-depth: 2
 
       - name: Run preview builds
-        uses: stainless-api/upload-openapi-spec-action/preview@sam/support-github-oidc-auth
+        uses: stainless-api/upload-openapi-spec-action/preview@release-please--branches--main--components--upload-openapi-spec-action
         with:
           org: ${{ env.STAINLESS_ORG }}
           project: ${{ env.STAINLESS_PROJECT }}
@@ -68,7 +68,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 2
       - name: Run merge build
-        uses: stainless-api/upload-openapi-spec-action/merge@sam/support-github-oidc-auth
+        uses: stainless-api/upload-openapi-spec-action/merge@release-please--branches--main--components--upload-openapi-spec-action
         with:
           org: ${{ env.STAINLESS_ORG }}
           project: ${{ env.STAINLESS_PROJECT }}
